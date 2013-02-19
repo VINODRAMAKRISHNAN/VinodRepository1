@@ -9,9 +9,37 @@
             <meta name="apple-mobile-web-app-capable" content="yes" />
            
            <link href="./css/Content/jquery.mobile-1.2.0.min.css" media="screen" rel="stylesheet" type="text/css"  /> 
-
+            <style type="text/css">
+ 
+                body {
+                /* Setting body margins to 0 to have proper positioning of #container div */
+                margin: 0;
+                }
+ 
+                /* #container div with absolute position and 100% width and height so it takes up whole window */
+                #container {
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                }
+ 
+            </style>
             <script src="./js/Scripts/jquery-1.7.1.js"></script>
+             <script type="text/javascript">
+                 $(document).one("mobileinit", function () {
+
+                     // Setting #container div as a jqm pageContainer
+                     $.mobile.pageContainer = $('#container');
+
+                     // Setting default page transition to slide
+                     $.mobile.defaultPageTransition = 'slide';
+
+                 });
+            </script>
             <script src="./js/Scripts/jquery.mobile-1.2.0.min.js"></script>
+      
+            <script src="./js/Scripts/iscroll.js" type="text/javascript"></script>
+            <script src="./js/Scripts/jquery.mobile.iscroll.js" type="text/javascript"></script>
     </head>
 
 
@@ -25,7 +53,7 @@
                   <h6>E&P Net</h6>
                 <div data-role="navbar" data-theme="e" >
 		            <ul>
-                        <li><a href="TestMobile.html" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="TestMobile.html"  rel="external" class="ui-btn-active ui-state-persist">Home</a></li>
 			            <li><a href="#win1">Dashboard</a></li>
 			            <li><a href="Window1.html" rel="external">Asset Manager</a></li>
 			            <li><a href="#win2">Rig Schedule</a></li>
