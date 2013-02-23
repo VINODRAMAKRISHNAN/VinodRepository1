@@ -37,7 +37,12 @@
 
                  });
 
-              
+                 $(document).bind('tap', function (e) {
+                     if ($(e.target).closest("[data-role='footer']").length > 0 ||
+                     $(e.target).closest("[data-role='header']").length > 0) {
+                         $('[data-role="content"]').hide();
+                     }
+                 });
             </script>
             <script src="./js/Scripts/jquery.mobile-1.2.0.min.js"></script>
       
