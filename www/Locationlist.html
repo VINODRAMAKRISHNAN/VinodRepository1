@@ -25,13 +25,17 @@
 
 
     <body>    
-            <div data-role=page id=Div1  data-title="E&P Net1"  data-theme="e" > 
-                <div  data-role=header data-position="inline" data-theme="a" data-fullscreen="true"> 
+            <div data-role=page id=pagemain  data-title="E&P Net1"  data-theme="e" > 
+                <div  data-role=header data-position="inline" data-theme="a" data-mini="true" data-fullscreen="true"> 
 	                <h6>E&P Net</h6>
                   
 	                   <!-- <div data-type="horizontal" data-role="controlgroup" >  -->
-                        <a class="ui-btn-left" data-role="label"  data-rel="back" data-corners="true" data-mini="true" data-inline="true" data-icon="back" data-theme="e"  data-iconpos="left">Back </a>
-                        <a class="ui-btn-right" data-role="button" data-mini="true" data-inline="true" data-icon="home" data-theme="e" data-iconpos="right"> Home</a>
+                          <!-- <a class="ui-btn-left" data-role="label"  data-rel="back" data-corners="true" data-mini="true" data-inline="true" data-icon="back" data-theme="e"  data-iconpos="left">Back </a
+                     <a class="ui-btn-right" data-role="button" data-mini="true" data-inline="true" data-icon="home" data-theme="e" data-iconpos="right"> Home</a> -->
+                    <a class="ui-btn-left"  data-mini="true" data-rel="back"  data-icon="back" data-theme="e"  data-iconpos="notext">Back </a>
+                    
+
+                        <a class="ui-btn-right" href="#pagemain" data-mini="true"  data-icon="home" data-theme="e" data-iconpos="notext"> Home</a>
                           
                         <div data-role="navbar" data-iconpos="right" class="ui-navbar" role="navigation" data-mini="true">
                             <ul>                        
